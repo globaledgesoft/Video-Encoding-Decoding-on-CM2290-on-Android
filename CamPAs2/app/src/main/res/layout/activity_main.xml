@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="279dp"
+        android:layout_height="256dp"
+        android:layout_weight="1">
+
+        <SurfaceView
+            android:id="@+id/surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <GridLayout
+        android:layout_width="233dp"
+        android:layout_height="251dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_id"
+            android:layout_width="223dp"
+            android:layout_height="160dp"
+            android:scrollbars="vertical"
+            android:text="@string/desc"
+            android:textStyle="italic" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/hevc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClick"
+                    android:text="HEVC" />
+
+                <RadioButton
+                    android:id="@+id/default_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClick"
+                    android:text="DEFAULT" />
+
+
+                <RadioButton
+                    android:id="@+id/h263"
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClick"
+                    android:text="H263" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/h264"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClick"
+                    android:text="H264" />
+
+                <RadioButton
+                    android:id="@+id/mpeg4sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClick"
+                    android:text="MPEG4_SP" />
+
+            </GridLayout>
+        </RadioGroup>
+    </GridLayout>
+
+
+    <GridLayout
+        android:layout_width="59dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/gallery"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="50dp"
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gallery" />
+
+        <ImageButton
+            android:id="@+id/record"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginBottom="100dp"
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/record" />
+
+    </GridLayout>
+</GridLayout>
